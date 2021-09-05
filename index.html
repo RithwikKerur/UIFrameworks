@@ -94,14 +94,73 @@
                 </div>
 
                 <div class = "col-12 col-sm align-self-center">
-                    <button role = "button" class = "btn btn-block nav-link btn-warning" href = "#form1"
-                    data-toggle = "tooltip" data-html = "true"
-                    title = "Or Call us at <br><strong>+852 12345677</strong>"
-                    data-placement = "bottom">Reserve Table</button>
+                    
+
+                    <button type = "button" class = "bg bg-warning badge-pill" data-toggle = "modal" data-target="#reserveModal">
+                        Reserve a Table
+                    </button>
                 </div>
             </div>
         </div>
     </header>
+
+    <div id = "reserveModal" class = "modal fade" role = "dialog">
+        <div class = "modal-dialog modal-lg" role = "content">
+            <div class = "modal-content">
+                <div class = "modal-header">
+                    <h4 class = "modal-title">Reserve a Table</h4>
+                    <button type = "button" class = "close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class = "modal-body">
+                    <div class = "row" >
+                        <label class = "form-label col-2">Number of Guests</label>
+                        
+                        <form class = "col-10">
+                            
+                            <input type = "radio" id = "reservation" name = "r" value = "1">
+                            <label for = "reservation">1</label>
+                            <input type = "radio" id = "reservation" name = "r" value = "2">
+                            <label for = "reservation">2</label>
+                            <input type = "radio" id = "reservation" name = "r" value = "3">
+                            <label for = "reservation">3</label>
+                            <input type = "radio" id = "reservation" name = "r" value = "4">
+                            <label for = "reservation">4</label>
+                            <input type = "radio" id = "reservation" name = "r" value = "5">
+                            <label for = "reservation">5</label>
+                            <input type = "radio" id = "reservation" name = "r" value = "6">
+                            <label for = "reservation">6</label>
+                        </form>
+                    </div>
+
+                    <div class = "row" id = "reserveRow"> 
+                        <label class = "form-label col-2">Section</label> 
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Smoking</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Non Smoking</label>
+                        </div>
+                            
+                            
+                    </div>
+
+                    <div class = "row" id = "reserveRow">
+                        <label class = "form-label col-2">Date and Time</label>
+                        <input type = "date" class = "form-control col-3" placeholder = "Date" value = "Date">
+                        <input type = "time" class = "form-control col-3 offset-1" placeholder = "Time">
+                    </div>
+
+                    <div class = "row">
+                        <button type = "submit" class = "btn btn-primary offset-2" id = "reserve">Reserve</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <div class = "container">
 
@@ -287,11 +346,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
 
 </html>
